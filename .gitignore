@@ -1,0 +1,10 @@
+# CLI Ignore
+cli/node_modules
+cli/package-lock.json
+
+# UI Ignore
+ui/node_modules
+ui/package-lock.json
+
+# Config Ignore
+vscode
