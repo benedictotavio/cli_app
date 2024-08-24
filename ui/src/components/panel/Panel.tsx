@@ -4,7 +4,7 @@ import { ListService } from "../../services/list.services";
 import { WordsTree } from "../../interfaces/wordsTree.interface";
 import TreeNode from "./tree/TreeNode";
 import db from "../../../dicts/structures.json";
-import { DataService } from "../../services/data.service";
+import { DataService } from "../../services/data.services";
 import Modal from "../modal/Modal";
 import JsonDisplay from "./JsonDisplay";
 import Button from "../buttons/Button";

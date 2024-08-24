@@ -11,7 +11,8 @@
     "json": "npx json-server ./dicts/structures.json --watch --port 2005",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest"
   },
   "dependencies": {
     "react": "^18.3.1",
