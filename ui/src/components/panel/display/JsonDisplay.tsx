@@ -13,10 +13,10 @@ const JsonDisplay: React.FC<JsonDisplayProps> = ({
     const jsonString = JSON.stringify(data, null, 2);
     navigator.clipboard.writeText(jsonString).then(
       () => {
-        alert("JSON copied to clipboard!");
+        window.alert("JSON Copiado com sucesso!");
       },
       (err) => {
-        alert("Failed to copy JSON: " + err);
+        window.alert("Erro ao copiar JSON: " + err.message);
       }
     );
   };

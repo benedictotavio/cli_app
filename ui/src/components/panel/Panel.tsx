@@ -19,26 +19,23 @@ const Panel = () => {
 
   const service = new ListService();
 
-  const addInitialWordToJson = (e: any) => {
-    if (word === "") {
-      window.alert("Preencha todos os campos");
-      return;
-    }
-    e.preventDefault();
-    setJson([...json, { name: word, node: node }]);
-    setParent(!parent ? word : "");
-    setWord("");
-    setNode(0);
-  };
-
   const addWordToJson = (e: any) => {
     if (word === "" && parent === "") {
       window.alert("Preencha todos os campos");
       return;
     }
     e.preventDefault();
-    setJson([...json, { name: word, parent: parent, node: node + 1 }]);
-    setParent(!parent ? word : "");
+
+    if (json.length === 0) {
+      setJson([{ name: word, parent: "", node: 0 }]);
+      setParent(word);
+      setNode(0);
+      setWord("");
+      return;
+    }
+
+    setJson([...json, { name: word, parent: parent, node: node + 1 }])
+    setParent(word);
     setWord("");
     setNode(0);
   };
@@ -60,7 +57,7 @@ const Panel = () => {
       />
       <Tree
         json={json}
-        addWordToJson={addInitialWordToJson}
+        addWordToJson={addWordToJson}
         setWord={setWord}
         word={word}
       />
