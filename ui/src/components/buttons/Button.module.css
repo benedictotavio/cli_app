@@ -1,27 +1,19 @@
-.json_button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+button.button_add {
+  color: rgb(214, 221, 226);
+  font-weight: bold;
   background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  min-width: 60px;
-  min-height: 60px;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  margin: 10px;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-.json_button:hover {
+button.button_add:hover {
   background-color: #0056b3;
   transform: scale(1.1);
-}
-
-.json_button:focus {
-  outline: none;
 }

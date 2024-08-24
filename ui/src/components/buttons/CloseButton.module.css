@@ -1,0 +1,12 @@
+.close_button {
+    border: none;
+    border-radius: 15%;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.75em;
+  }
+  
+  .close_button:hover {
+    transform: scale(1.15);
+  }
