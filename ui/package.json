@@ -7,7 +7,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "json": "npx json-server ./dicts/structures.json --watch --port 2005",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

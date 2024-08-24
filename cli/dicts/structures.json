@@ -1,0 +1,131 @@
+[
+  {
+    "node": 0,
+    "name": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Mamíferos",
+    "parent": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Aves",
+    "parent": "Animais"
+  },
+  {
+    "node": 2,
+    "name": "Carnívoros",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Pássaros",
+    "parent": "Aves"
+  },
+  {
+    "node": 2,
+    "name": "Bovídeos",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Herbívoros",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Primatas",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Rapinas",
+    "parent": "Aves"
+  },
+  {
+    "node": 3,
+    "name": "Felinos",
+    "parent": "Carnívoros"
+  },
+  {
+    "node": 3,
+    "name": "Equídeos",
+    "parent": "Carnívoros"
+  },
+  {
+    "node": 4,
+    "name": "Leão",
+    "parent": "Felinos"
+  },
+  {
+    "node": 4,
+    "name": "Tigre",
+    "parent": "Felinos"
+  },
+  {
+    "node": 4,
+    "name": "Jaguars",
+    "parent": "Felinos"
+  },
+  {
+    "node": 4,
+    "name": "Leopardo",
+    "parent": "Felinos"
+  },
+  {
+    "node": 4,
+    "name": "Cavalo",
+    "parent": "Equídeos"
+  },
+  {
+    "node": 3,
+    "name": "Bois",
+    "parent": "Bovídeos"
+  },
+  {
+    "node": 3,
+    "name": "Cabras",
+    "parent": "Bovídeos"
+  },
+  {
+    "node": 3,
+    "name": "Orangotangos",
+    "parent": "Primatas"
+  },
+  {
+    "node": 3,
+    "name": "Gorilas",
+    "parent": "Primatas"
+  },
+  {
+    "node": 3,
+    "name": "Papagaios",
+    "parent": "Pássaros"
+  },
+  {
+    "name": "John",
+    "parent": "Animals",
+    "node": "1"
+  },
+  {
+    "name": "John",
+    "parent": "Animals",
+    "node": "1"
+  },
+  {
+    "name": "John",
+    "parent": "Animals",
+    "node": "1"
+  },
+  {
+    "name": "John",
+    "parent": "Animals",
+    "node": "1"
+  },
+  {
+    "name": "John",
+    "parent": "Animals",
+    "node": "1"
+  }
+]
