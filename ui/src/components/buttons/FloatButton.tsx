@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./FloatButton.module.css";
+import json_icon from "../../../assets/code.png";
 
 interface JsonButtonProps {
   onClick: () => void;
@@ -12,7 +13,7 @@ const JsonButton: FunctionComponent<JsonButtonProps> = ({
 }: JsonButtonProps) => {
   return (
     <button className={styles.json_button} onClick={onClick}>
-      {text}
+      {text} JS<img src={json_icon} alt="json" />N
     </button>
   );
 };

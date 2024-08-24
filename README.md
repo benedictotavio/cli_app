@@ -44,7 +44,7 @@ bun run cli.ts add --node <number> --name <string> --parent <string>
 | `add`                  | Comando para adicionar um nó.                                   |
 | `-nd --node <number>`  | Define o número do nó.                                          |
 | `-n --name <string>`   | Define a palavra a ser adicionada.                              |
-| `-p --parent <string>` | Define o nó pai.                                                |
+| `-p --parent <string>` | Define a palavra pai.                                           |
 
 ### Linha de Comando
 
@@ -75,7 +75,7 @@ Bovídeos = 1;
 Primatas = 1;
 ```
 
-## Frontend![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+## Frontend!
 
 Interface web construida com React e TypeScript que permita ao usuário criar uma hierarquia de palavras.
 
