@@ -1,0 +1,41 @@
+[
+  {
+    "node": 0,
+    "name": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Mamíferos",
+    "parent": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Aves",
+    "parent": "Animais"
+  },
+  {
+    "node": 2,
+    "name": "Carnívoros",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Pássaros",
+    "parent": "Aves"
+  },
+  {
+    "node": 3,
+    "name": "Felinos",
+    "parent": "Carnívoros"
+  },
+  {
+    "node": 4,
+    "name": "Leão",
+    "parent": "Felinos"
+  },
+  {
+    "node": 3,
+    "name": "Papagaios",
+    "parent": "Pássaros"
+  }
+]
