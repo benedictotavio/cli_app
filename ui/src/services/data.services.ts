@@ -4,7 +4,6 @@ export class DataService {
   private root: WordsTree[] = [];
 
   public transformData(data: WordsTree[]) {
-    console.log(data);
     const nodesMap = new Map();
 
     // Create a map of nodes

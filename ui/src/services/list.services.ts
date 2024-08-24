@@ -29,7 +29,7 @@ export class ListService {
     return list.reduce((acc: any, item: any) => {
       if (acc.includes(item.name)) return acc;
       else {
-        acc.push({ name: item.name, node: item.node });
+        acc.push({ name: item.name, node: item.node, parent: item.parent });
         return acc;
       }
     }, []);
