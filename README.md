@@ -1,4 +1,4 @@
-# Documentação Técnico
+# Documentação Técnica
 
 ## CLI
 
@@ -30,19 +30,19 @@ Na pasta cli/dicts/structures.json, o arquivo `structures.json` contém a estrut
 }
 ```
 
-Ou pode usar a cli para adicionar o nó via CLI:
+Tambem é possiível usar a _cli_ para adicionar o um novo nó ao arquivo json:
 
 ```bash
 bun run cli.ts add --node <number> --name <string> --parent <string>
 ```
 
-| Opção               | Descrição                                                       |
-| ------------------- | --------------------------------------------------------------- |
-| `bun run cli.ts`    | Executa o arquivo `cli.ts` usando o gerenciador de pacotes Bun. |
-| `add`               | Comando para adicionar um nó.                                   |
-| `-nd --node <number>`   | Define o número do nó.                                      |
-| `-n --name <string>`   | Define a palavra a ser adicionada.                           |
-| `-p --parent <string>` | Define o nó pai.                                             |
+| Opção                  | Descrição                                                       |
+| ---------------------- | --------------------------------------------------------------- |
+| `bun run cli.ts`       | Executa o arquivo `cli.ts` usando o gerenciador de pacotes Bun. |
+| `add`                  | Comando para adicionar um nó.                                   |
+| `-nd --node <number>`  | Define o número do nó.                                          |
+| `-n --name <string>`   | Define a palavra a ser adicionada.                              |
+| `-p --parent <string>` | Define o nó pai.                                                |
 
 ### Linha de Comando
 
@@ -72,3 +72,21 @@ Tempo de verficação da frase: 0.14 ms
 Bovídeos = 1;
 Primatas = 1;
 ```
+
+
+## Frontend
+
+Interface web construida com React e TypeScript que permita ao usuário criar uma hierarquia de palavras.
+
+Para abrir o frontend, basta executar o seguinte comando:
+
+```bash
+cd frontend
+npm run dev
+```
+
+### Output
+
+![Screenshot](./assets/vite_succes_server_5172.jpg)
+
+[Acessar o localhost](http://localhost:5173/)
