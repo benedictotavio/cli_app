@@ -1,6 +1,7 @@
 # CLI Ignore
 cli/node_modules
 cli/package-lock.json
+cli/bun.lockb
 
 # UI Ignore
 ui/node_modules

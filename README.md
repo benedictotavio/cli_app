@@ -18,6 +18,7 @@ Para executar a _CLI_, basta abrir a pasta `cli`. Execute o seguinte comando:
 
 ```bash
 cd cli
+bun install
 ```
 
 #### Base de dados
@@ -85,6 +86,7 @@ Para abrir o frontend, basta executar o seguinte comando:
 
 ```bash
 cd ui
+npm install
 npm run dev
 ```
 
