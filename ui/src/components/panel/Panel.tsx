@@ -64,7 +64,7 @@ const Panel = () => {
       <Modal isOpen={isModalOpen} onClose={closeModal}>
         <JsonDisplay data={json} />
       </Modal>
-      <FloatButton onClick={openModal} text="Download" />
+      <FloatButton onClick={openModal} text="Download" bottom={20} right={20} />
     </>
   );
 };

@@ -9,6 +9,14 @@
   z-index: 1000;
 }
 
+@media (max-width: 600px) {
+  .modal_content {
+    min-width: 300px;
+    min-height: 300px;
+    background-color: aqua;
+  }
+}
+
 .modal_content {
   position: fixed;
   top: 50%;

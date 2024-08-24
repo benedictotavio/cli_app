@@ -27,7 +27,15 @@ export class DataService {
     return this.root;
   }
 
-  public addNewWord(word: string, parent: string, node: number) {
-    this.root.push({ name: word, parent, node });
+  public handleCopy(data: WordsTree[]) {
+    const jsonString = JSON.stringify(data, null, 2);
+    navigator.clipboard.writeText(jsonString).then(
+      () => {
+        window.alert("JSON Copiado com sucesso!");
+      },
+      (err) => {
+        window.alert("Erro ao copiar JSON: " + err.message);
+      }
+    );
   }
 }

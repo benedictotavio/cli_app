@@ -4,6 +4,13 @@ div.content {
   grid-template-columns: 1fr 3.5fr;
   grid-template-rows: 1fr;
   gap: 15px;
-  min-height: 100vh;
+  height: 100vh;
+}
+
+@media (max-width: 600px) {
+  div.content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr;
+  }
 }
 

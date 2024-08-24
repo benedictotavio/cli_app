@@ -1,34 +1,58 @@
 div.panel {
-    display: flex;
-    justify-content: center;
-    background-color: #667a99;
-    color: #fff;
-    margin-top: -10px;
-    margin-left: -10px;
-    min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #667a99;
+  color: #fff;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+div.panel .form_add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+div.mobile_panel {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  div.panel {
+    display: none;
   }
-  
-  div.panel .form_add {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+  div.mobile_panel {
+    display: block;
   }
-  
-  .button_section {
-    border: 0;
-    background: none;
-    text-decoration: none;
-    margin-top: 35%;
-    padding: 0;
-  }
-  
-  .select_section {
-    border: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-  }
+}
+
+.button_section {
+  border: 0;
+  background: none;
+  text-decoration: none;
+  margin-top: 35%;
+  padding: 0;
+}
+
+.select_section {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+form.form_add_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 50vh;
+  margin: 0;
+  padding: 0;
+}

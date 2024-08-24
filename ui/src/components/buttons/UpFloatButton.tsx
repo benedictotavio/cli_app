@@ -1,8 +1,7 @@
 import { FunctionComponent } from "react";
-import styles from "./FloatButton.module.css";
-import json_icon from "../../../assets/code.png";
+import styles from "./UpFloatButton.module.css";
 
-interface JsonButtonProps {
+interface UpFloatButtonProps {
   onClick: () => void;
   text: string;
   right?: number;
@@ -11,22 +10,22 @@ interface JsonButtonProps {
   bottom?: number;
 }
 
-const JsonButton: FunctionComponent<JsonButtonProps> = ({
+const UpFloatButton: FunctionComponent<UpFloatButtonProps> = ({
   onClick,
   text,
   right,
   top,
   left,
-  bottom,
-}: JsonButtonProps) => {
+  bottom
+}: UpFloatButtonProps) => {
   return (
     <button
       style={{ right: right + "px", top: top + "px", left: left + "px", bottom: bottom + "px" }}
-      className={styles.json_button}
+      className={styles.up_float_button}
       onClick={onClick}>
-      {text} JS<img src={json_icon} alt="json" />N
+      {text}
     </button>
   );
 };
 
-export default JsonButton;
+export default UpFloatButton;
