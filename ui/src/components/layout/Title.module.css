@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root {
+  --logo-color: #007bff;
+}
+
+.title {
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Permanent Marker", cursive;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: 0 0 5px var(--logo-color), 0 0 10px var(--logo-color),
+    0 0 15px var(--logo-color), 0 0 10px var(--logo-color),
+    0 0 15px var(--logo-color), 0 0 15px var(--logo-color),
+    0 0 35px var(--logo-color);
+}
