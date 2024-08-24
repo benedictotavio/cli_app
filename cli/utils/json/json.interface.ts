@@ -1,7 +1,8 @@
 export interface JsonObject {
-    [key: string]: any;
-  }
+  [key: string]: any;
+}
 
 export interface JsonManagerInterface {
-    insert(newObject: JsonObject): Promise<string>;
+  insert(newObject: JsonObject): Promise<string>;
+  show(): Promise<string>;
 }

@@ -21,33 +21,9 @@ cd cli
 bun install
 ```
 
-#### Base de dados
+## Linhas de Comando
 
-Na pasta cli/dicts/structures.json, o arquivo `structures.json` contém a estrutura da árvore de palavras. Para adicionar um nó, basta adicionar um objeto contendo os atributos `node`, `name` e `parent`.
-
-```json
-{
-  "node": 1,
-  "name": "Peixes",
-  "parent": "Animais"
-}
-```
-
-Tambem é possiível usar a _cli_ para adicionar o um novo objeto ao arquivo json:
-
-```bash
-bun run cli.ts add --node <number> --name <string> --parent <string>
-```
-
-| Opção                  | Descrição                                                       |
-| ---------------------- | --------------------------------------------------------------- |
-| `bun run cli.ts`       | Executa o arquivo `cli.ts` usando o gerenciador de pacotes Bun. |
-| `add`                  | Comando para adicionar um nó.                                   |
-| `-nd --node <number>`  | Define o número do nó.                                          |
-| `-n --name <string>`   | Define a palavra a ser adicionada.                              |
-| `-p --parent <string>` | Define a palavra pai.                                           |
-
-### Linha de Comando
+### Análise de Frase
 
 ```bash
 bun run cli.ts analyze --depth <number> --verbose <string>
@@ -67,7 +43,7 @@ bun run cli.ts analyze --depth <number> --verbose <string>
 bun run cli.ts analyze --depth 3 --verbose "A árvore hierárquica de palavras é útil."
 ```
 
-*Verfica se no nivel hierquico 3 existe algumas das palavras na frase "A árvore hierárquica de palavras"*
+_Verfica se no nivel hierquico 3 existe algumas das palavras na frase "A árvore hierárquica de palavras"_
 
 ##### Output
 
@@ -76,6 +52,74 @@ Tempo de verfificação dos parâmetros: 0.31 ms
 Tempo de verficação da frase: 0.14 ms
 Bovídeos = 1;
 Primatas = 1;
+```
+
+### Adicionar um objeto
+
+Na pasta cli/dicts/structures.json, o arquivo `structures.json` contém a estrutura da árvore de palavras. Para adicionar um nó, basta adicionar um objeto contendo os atributos `node`, `name` e `parent`.
+
+```json
+{
+  "node": 0,
+  "name": "string",
+  "parent": "string"
+}
+```
+
+Tambem é possiível usar a _cli_ para adicionar o um novo objeto ao arquivo json:
+
+```bash
+bun run cli.ts add --node <number> --name <string> --parent <string>git add
+```
+
+| Opção                  | Descrição                                                       |
+| ---------------------- | --------------------------------------------------------------- |
+| `bun run cli.ts`       | Executa o arquivo `cli.ts` usando o gerenciador de pacotes Bun. |
+| `add`                  | Comando para adicionar um nó.                                   |
+| `-nd --node <number>`  | Define o número do nó.                                          |
+| `-n --name <string>`   | Define a palavra a ser adicionada.                              |
+| `-p --parent <string>` | Define a palavra pai.                                           |
+
+### Ler Objeto
+
+```bash
+bun run cli.ts show
+```
+
+| Opção            | Descrição                                                       |
+| ---------------- | --------------------------------------------------------------- |
+| `bun run cli.ts` | Executa o arquivo `cli.ts` usando o gerenciador de pacotes Bun. |
+| `show`            | Comando para mostrar o objeto json.                             |
+
+#### Output
+
+```bash
+[
+  {
+    "node": 0,
+    "name": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Mamíferos",
+    "parent": "Animais"
+  },
+  {
+    "node": 1,
+    "name": "Aves",
+    "parent": "Animais"
+  },
+  {
+    "node": 2,
+    "name": "Carnívoros",
+    "parent": "Mamíferos"
+  },
+  {
+    "node": 2,
+    "name": "Pássaros",
+    "parent": "Aves"
+  }
+]
 ```
 
 ## Frontend

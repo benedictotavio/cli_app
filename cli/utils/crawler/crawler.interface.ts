@@ -6,4 +6,5 @@ export interface CrawlerInterface {
   analyzed(phrase: string, node: number, json?: Srtucture[]): Result[];
   getLoadPhraseProcessing(): number
   getLoadParamsProcessing(): number
+  isParentExists(name: string, json: Srtucture[]): boolean
 }

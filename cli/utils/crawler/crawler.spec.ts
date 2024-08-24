@@ -51,7 +51,7 @@ describe("Crawler", () => {
 
   it("Get parents by node 3", () => {
     const properties = crawler.filterWordsByNode(3, json);
-    expect(properties).toHaveLength(7);
+    expect(properties).toHaveLength(9);
   });
 
   it("Get parents by node 4", () => {
@@ -65,14 +65,24 @@ describe("Crawler", () => {
   });
 
   it("is analyzed return an array", () => {
-    const phrase = generatePhrase(hierarchy);
+    const phrase = generate5000WordsPhrase(hierarchy);
     const properties = crawler.analyzed(phrase, 3, json);
     expect(Array.isArray(properties)).toBe(true);
     expect(properties).not.toBeUndefined();
   });
+
+  it("should return a if parent exists", () => {
+    const properties = crawler.isParentExists("Gorilas", json);
+    expect(properties).toBe(true);
+  })
+
+  it("should return false a if parent not exists", () => {
+    const properties = crawler.isParentExists("Carro", json);
+    expect(properties).toBe(false);
+  })
 });
 
-function generatePhrase(hierarchy: object) {
+function generate5000WordsPhrase(hierarchy: object) {
   function buildPhrase(node: any, maxWords: number): string[] {
     const keys = Object.keys(node);
     let phrase = [];

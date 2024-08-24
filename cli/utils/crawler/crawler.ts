@@ -16,6 +16,9 @@ export class Crawler implements CrawlerInterface {
     this.laodPhraseProcessing = 0;
     this.loadParamsProcessing = 0;
   }
+  public isParentExists(name: string, json: Srtucture[]): boolean {
+    return json.some((word) => word.name === name);
+  }
 
   public analyzed(phrase: string, node: number): Result[] {
     let start = performance.now();

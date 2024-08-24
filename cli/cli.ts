@@ -5,13 +5,12 @@ import { Command } from "commander";
 import { JsonManager } from "./utils/json/json.manager";
 import path from "path";
 
-const filePath = path.join(__dirname, "./dicts/structures.json");
-const jsonManager = new JsonManager(filePath);
-const program = new Command();
-
 const action: CrawlerInterface = new Crawler(
   require("./dicts/structures.json")
 );
+const filePath = path.join(__dirname, "./dicts/structures.json");
+const jsonManager = new JsonManager(filePath, action);
+const program = new Command();
 
 program.name("cli").version("0.0.1").description("CLI app");
 
@@ -66,6 +65,16 @@ program
         node: options.node,
       })
       .then((res) => console.log(chalk.green(res)));
+  });
+
+program
+  .command("show")
+  .description("show all objects in a JSON file")
+  .action(() => {
+    jsonManager
+      .show()
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   });
 
 program.parse();
