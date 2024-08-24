@@ -4,12 +4,30 @@ import { CrawlerInterface } from "./crawler.interface";
 
 describe("Crawler", () => {
   let crawler: CrawlerInterface;
-
+  let hierarchy: object;
   let json: Srtucture[];
 
   beforeEach(() => {
     json = require("../../dicts/structures.json");
     crawler = new Crawler(json);
+    hierarchy = {
+      Animais: {
+        Mamíferos: {
+          Carnívoros: {
+            Felinos: ["Leões", "Tigres", "Jaguars", "Leopardos"],
+          },
+          Herbívoros: {
+            Equídeos: ["Cavalos", "Zebras", "Asnos"],
+            Bovídeos: ["Bois", "Búfalos", "Antílopes", "Cabras"],
+            Primatas: ["Gorilas", "Chimpanzés", "Orangotangos"],
+          },
+        },
+        Aves: {
+          Rapinas: ["Águias", "Falcões", "Corujas", "Milhafres"],
+          Pássaros: ["Canários", "Papagaios", "Pardais", "Rouxinóis"],
+        },
+      },
+    };
   });
 
   it("should be defined", () => {
@@ -45,4 +63,42 @@ describe("Crawler", () => {
     const properties = crawler.filterWordsByNode(10, json);
     expect(properties).toHaveLength(0);
   });
+
+  it("is analyzed return an array", () => {
+    const phrase = generatePhrase(hierarchy);
+    const properties = crawler.analyzed(phrase, 3, json);
+    expect(Array.isArray(properties)).toBe(true);
+    expect(properties).not.toBeUndefined();
+  });
 });
+
+function generatePhrase(hierarchy: object) {
+  function buildPhrase(node: any, maxWords: number): string[] {
+    const keys = Object.keys(node);
+    let phrase = [];
+
+    while (phrase.length < maxWords && keys.length > 0) {
+      const key = keys[Math.floor(Math.random() * keys.length)];
+      const value = node[key];
+
+      if (Array.isArray(value)) {
+        phrase.push(...value);
+      } else {
+        // Recursively process sub-nodes
+        phrase.push(key);
+        phrase.push(...buildPhrase(value, maxWords - phrase.length));
+      }
+    }
+
+    return phrase;
+  }
+
+  const maxWords = 5000;
+  const phraseArray: string[] = buildPhrase(hierarchy, maxWords);
+
+  if (phraseArray.length > maxWords) {
+    phraseArray.length = maxWords;
+  }
+
+  return phraseArray.join(" ");
+}
