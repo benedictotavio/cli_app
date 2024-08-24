@@ -1,0 +1,9 @@
+div.content {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 3.5fr;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  min-height: 100vh;
+}
+
