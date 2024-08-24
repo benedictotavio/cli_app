@@ -60,11 +60,13 @@ bun run cli.ts analyze --depth <number> --verbose <string>
 | `--verbose`        | Habilita a saída detalhada da execução (modo verboso).                                      |
 | `<string>`         | A frase a ser analisada.                                                                    |
 
-##### Comando
+##### Exemplo Comando
 
 ```bash
 bun run cli.ts analyze --depth 3 --verbose "A árvore hierárquica de palavras é útil."
 ```
+
+*Verfica se no nivel hierquico 3 existe algumas das palavras na frase "A árvore hierárquica de palavras"*
 
 ##### Output
 
