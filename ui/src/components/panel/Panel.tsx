@@ -37,7 +37,7 @@ const Panel = () => {
     setJson([...json, { name: word, parent: parent, node: node + 1 }])
     setParent(word);
     setWord("");
-    setNode(0);
+    setNode(node + 1);
   };
 
   const changeSelect = (e: any) => {
