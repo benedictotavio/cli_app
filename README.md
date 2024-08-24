@@ -81,7 +81,7 @@ Interface web construida com React e TypeScript que permita ao usuário criar um
 Para abrir o frontend, basta executar o seguinte comando:
 
 ```bash
-cd frontend
+cd ui
 npm run dev
 ```
 
