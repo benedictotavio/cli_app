@@ -1,5 +1,5 @@
 import React from "react";
-import { WordsTree } from "../../interfaces/wordsTree.interface";
+import { WordsTree } from "../../../interfaces/wordsTree.interface";
 import styles from "./JsonDisplay.module.css";
 
 interface JsonDisplayProps {
