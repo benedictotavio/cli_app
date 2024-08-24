@@ -32,7 +32,7 @@ Na pasta cli/dicts/structures.json, o arquivo `structures.json` contém a estrut
 }
 ```
 
-Tambem é possiível usar a _cli_ para adicionar o um novo nó ao arquivo json:
+Tambem é possiível usar a _cli_ para adicionar o um novo objeto ao arquivo json:
 
 ```bash
 bun run cli.ts add --node <number> --name <string> --parent <string>
@@ -75,7 +75,7 @@ Bovídeos = 1;
 Primatas = 1;
 ```
 
-## Frontend!
+## Frontend
 
 Interface web construida com React e TypeScript que permita ao usuário criar uma hierarquia de palavras.
 
